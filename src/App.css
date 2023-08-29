@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+*{
+  margin: 0 auto;
+  padding: 0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Base-component{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.heading{
+  padding:20px;
+  font-family: sans-serif;
+ 
+}
+.main-segment{
+  width: 100%;
+  text-align: center;
+  height: 75%;
+}
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(340px,1fr)); 
+}
+.card{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  background-color: lightcyan;
+}
+.content{
+  margin: 5px;
+}
+.control{
+  margin: 10px;
+}
+.btn-base{
+  display: flex;
+  flex-direction:row ;
+  margin: 5vw;
+  gap: 10rem;
+  justify-content: center;
+}
+.addstudent-input{
+  margin:0 auto;
+  height: 11vh;
+ background-color: lightgreen;
+ border-radius: 50px;
+ width: 80%;
+}
+.updatestudent-input{
+  border:1px solid red;
+  height: 11vh;
+  background-color: rgb(249, 249, 155);
+  border-radius: 50px;
+  width: 80%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width:1150px) {
+  .addstudent-input{
+    width: 550px;
+    height: 150px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width:600px) {
+  .card-container{
+    display: flex;
+    flex-direction: column;
   }
 }
